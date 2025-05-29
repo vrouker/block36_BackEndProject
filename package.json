@@ -1,0 +1,27 @@
+{
+  "name": "block36_backendproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "db:schema": "psql -d dmv -f db/schema.sql",
+		"db:seed": "psql -d dmv -f db/seed.sql",
+		"db:reset": "npm run db:schema && npm run db:seed",
+		"dev": "node --watch --env-file=.env server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vrouker/block36_BackEndProject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vrouker/block36_BackEndProject/issues"
+  },
+  "homepage": "https://github.com/vrouker/block36_BackEndProject#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "pg": "^8.16.0"
+  }
+}
