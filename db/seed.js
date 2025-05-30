@@ -1,4 +1,4 @@
-import db from "../client.js";
+import db from "./client.js";
 import { createDinosaur} from "./queries/dinosaurs.js";
 import { createEra } from "./queries/era.js";
 

@@ -5,7 +5,7 @@ import db from "../client.js";
 export async function createEra({name, years_ago}){
     const sql = `
         INSERT INTO era (name, years_ago)
-        VALUES *=($1, $2)
+        VALUES ($1, $2)
         RETURNING *;
     `
 

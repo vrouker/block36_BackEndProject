@@ -1,4 +1,9 @@
-CREATE TABLE eras (
+DROP TABLE IF EXISTS dinosaurs;
+DROP TABLE IF EXISTS era;
+
+
+
+CREATE TABLE era (
     id SERIAL PRIMARY KEY,
     name TEXT NOT NULL,
     years_ago INTEGER NOT NULL
