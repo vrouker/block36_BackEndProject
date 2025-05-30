@@ -1,0 +1,14 @@
+CREATE TABLE eras (
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    years_ago INTEGER NOT NULL
+);
+
+CREATE TABLE dinosaurs(
+    id SERIAL PRIMARY KEY,
+    name TEXT UNIQUE NOT NULL,
+    mass INTEGER NOT NULL,
+    lifespan INTEGER NOT NULL, 
+    diet TEXT NOT NULL,
+    era_id INTEGER NOT NULL
+);
