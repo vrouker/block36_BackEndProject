@@ -6,9 +6,9 @@
   "type": "module",
   "scripts": {
     "db:schema": "psql -d dinos -f db/schema.sql",
-		"db:seed": "node --env-file=.env db/seed.js",
-		"db:reset": "npm run db:schema && npm run db:seed",
-		"dev": "node --watch --env-file=.env server.js"
+    "db:seed": "node --env-file=.env db/seed.js",
+    "db:reset": "npm run db:schema && npm run db:seed",
+    "dev": "node --watch --env-file=.env server.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
   "homepage": "https://github.com/vrouker/block36_BackEndProject#readme",
   "dependencies": {
     "express": "^5.1.0",
-    "pg": "^8.16.0"
+    "pg": "^8.16.0",
+    "vite": "^6.3.5"
   }
 }
