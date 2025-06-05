@@ -16,15 +16,16 @@ router.route("/").get(async(req, res)=>{
 
 //GET /:id - routes to a dino with a given id
 router.route("/:id").get(async(req,res)=>{
-    const {id} = req.params.id;
+    const dinoID = req.params.id;
+    console.log(req.params.id)
+    console.log(dinoID);
 
     //if the ID is not a valid integer
-    if (!Number.isInteger(id) && id <0){
+    if (!Number.isInteger(dinoID) && dinoID <0){
         return res.status(400).send({error:`Please use a valid number for the ID.`})
     };
 
-    //
-    const dinosaur = await getDinoById();
+    const dinosaur = await getDinoById(dinoID);
 
     //if the ID does not exist
     if (!dinosaur){

@@ -7,7 +7,7 @@ import erasRouter from "./api/era.js";
 
 app.use(express.json());
 
-app.use("/dinosuars", dinosRouter);
+app.use("/dinosaurs", dinosRouter);
 
 app.use("/eras", erasRouter);
 
