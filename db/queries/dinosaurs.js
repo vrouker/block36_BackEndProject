@@ -43,7 +43,7 @@ export async function getDinoById(id){
 
 
 //updateDino(id, data) - returns the updated dinosaur with the given id
-export async function updateDino([id, name, mass, lifespan, diet, era_id]){
+export async function updateDino({id, name, mass, lifespan, diet, era_id}){
     const sql =`
     UPDATE dinosaurs
     SET name = $1, mass = $2, lifespan = $3, diet = $4, era_id = $5
